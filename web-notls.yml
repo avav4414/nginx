@@ -3,23 +3,26 @@
   become: True
 
   tasks:
-  
-  - name: install nginx 
-    apt: 
-       name: nginx
+    - name: update apt cache
+      apt:
+          cache_valid_time: 3600
+          update_cache: yes
 
-  # - name: copy nginx config file
-  #   copy: src=files/nginx.conf dest=/etc/nginx/sites-available/default
+    - name: install nginx 
+      apt: name=nginx   
 
-  # - name: enable configuration 
-  #   file: >
-  #     dest=/etc/nginx/sites-enableed/default
-  #     src=/etc/nginx/sites-available/default
-  #     state=link
+    - name: copy nginx config file
+      copy: src=files/nginx.conf dest=/etc/nginx/sites-available/default
 
-  # - name: copy index.html
-  #   template: 
-  #     src=/templates/index.html.j2
-  #     dest=/usr/share/nginx/html/index.html mode=0644
-  # - name: restart nginx 
-  #   service: name=nginx state=restarted         
+    - name: enable configuration 
+      file: >
+         dest=/etc/nginx/sites-enabled/default
+         src=/etc/nginx/sites-available/default
+         state=link
+
+    - name: copy index.html
+      template: src=templates/index.html.j2
+               dest=/usr/share/nginx/html/index.html mode=0644
+
+    - name: restart nginx 
+      service: name=nginx state=restarted enabled=yes

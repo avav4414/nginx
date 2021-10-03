@@ -1,3 +1,3 @@
 [webservers]
-testserver ansible_host=192.168.10.157 ansible_port=22 ansible_ssh_user=root ansible_ssh_pass=royal1688
+testserver ansible_host=192.168.10.157 ansible_port=22 ansible_ssh_user=frank ansible_ssh_pass=royal1688 ansible_sudo_pass=royal1688
 
