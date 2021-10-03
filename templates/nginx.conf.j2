@@ -6,9 +6,9 @@ server {
     index index.html index.htm;
 
     server_name {{ server_name }};
-    ssl_certicate {{ cert_file }};
-    ssl_certicate_key {{ key_file }};
-    
+    ssl_certificate {{ cert_file }};
+    ssl_certificate_key {{ key_file }};
+
     location / {
                 try_files $uri $uri/ =404; 
    } 
