@@ -3,7 +3,7 @@ k=$( awk 'END{print NR}' test.csv)
 echo $k
 
 for i in $(1..$k)
-p=$(cat test.csv | awk -F, 'NR==i{print $2}')
+p=$(cat test.csv | awk -F, 'NR==$i{print $2}')
     #do
     echo $p
 #echo      - targets: ['192.168.168.128:$p']
