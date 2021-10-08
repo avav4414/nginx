@@ -4,10 +4,11 @@ k=$( awk 'END{print NR}' test.csv)
 
 #for i in {1..$k}
 for ((i=1;i<=$k;i++))
-p=$( cat test.csv | awk -F, 'NR==${i} {print $2}')
+
 do
 echo $i
-echo $p
+echo cat test.csv | awk -F, 'NR==$i {print $2}'
+
 done
 #
     #do
