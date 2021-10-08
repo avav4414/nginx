@@ -1,9 +1,9 @@
 #!/bin/bash
-kk=awk 'END{print NR}' test.csv
-
-for i in $(cat $kk)
-    do
+k=$( awk 'END{print NR}' test.csv)
+echo k
+#for i in $(cat $k)
+   # do
 				
-        echo kk
+        #echo kk
 
-    done
+    #done
