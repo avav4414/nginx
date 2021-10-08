@@ -4,7 +4,7 @@ echo $k
 
 for i in {1..$k}
 do
-echo "$i"
+echo $i
 #p=$(cat test.csv | awk -F, 'NR==$i{print $2}')
     #do
     #echo $p
