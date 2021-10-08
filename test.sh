@@ -1,6 +1,6 @@
 #!/bin/bash
 k=$( awk 'END{print NR}' test.csv)
-echo k
+echo $k
 #for i in $(cat $k)
    # do
 				
