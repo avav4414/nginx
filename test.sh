@@ -7,8 +7,8 @@ for ((i=1;i<=$k;i++))
 
 do
 #echo $i
-echo "cat test.csv | awk -F, 'NR==$i {print $2}'"
-
+p=$"cat test.csv | awk -F, 'NR==$i {print $2}'"
+echo $p
 done
 #
     #do
