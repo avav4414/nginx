@@ -1,13 +1,15 @@
 #!/bin/bash
 k=$( awk 'END{print NR}' test.csv)
-echo $k
+
 
 #for i in {1..$k}
 for ((i=1;i<=$k;i++))
+p=$(cat test.csv | awk -F, 'NR==$i{print $2}')
 do
 echo $i
+echo $p
 done
-#p=$(cat test.csv | awk -F, 'NR==$i{print $2}')
+#
     #do
     #echo $p
 #echo      - targets: ['192.168.168.128:$p']
