@@ -2,7 +2,7 @@
 k=$( awk 'END{print NR}' test.csv)
 echo $k
 
-for i in (1..32)
+for i in {1..$k}
 do
 echo "$i"
 #p=$(cat test.csv | awk -F, 'NR==$i{print $2}')
