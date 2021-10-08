@@ -5,15 +5,14 @@ k=$( awk 'END{print NR}' test.csv)
 #for i in {1..$k}
 for ((i=1;i<=$k;i++))
 
-s=$(cat test.csv | awk -F, NR=='$i'{print $2})
+
 do
 #echo $i
+s=$(cat test.csv | awk -F, 'NR=='$i'{print $2}')
 
 echo $s
 done
-#
-    #do
-    #echo $p
+
 #echo      - targets: ['192.168.168.128:$p']
         #labels:
           #code: 1-1
