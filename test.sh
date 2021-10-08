@@ -10,7 +10,8 @@ do
 #echo $i
 s=$(cat test.csv | awk -F, 'NR=='$i'{print $2}')
 
-echo $s
+echo - targets: ['192.168.168.128:'$s'']
+
 done
 
 #echo      - targets: ['192.168.168.128:$p']
