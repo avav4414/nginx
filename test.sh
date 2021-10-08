@@ -3,7 +3,8 @@ k=$( awk 'END{print NR}' test.csv)
 echo $k
 
 for i in $(1..$k)
-echo $in
+do
+echo "$i"
 #p=$(cat test.csv | awk -F, 'NR==$i{print $2}')
     #do
     #echo $p
@@ -14,3 +15,4 @@ echo $in
           #slug: 1-3		
 
 
+done
