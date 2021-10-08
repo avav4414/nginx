@@ -5,7 +5,7 @@ k=$( awk 'END{print NR}' test.csv)
 #for i in {1..$k}
 for ((i=1;i<=$k;i++))
 
-s=$(cat test.csv | awk -F, 'NR=='$i'{print $2}')
+s=$(cat test.csv | awk -F, NR=='$i'{print $2})
 do
 #echo $i
 
