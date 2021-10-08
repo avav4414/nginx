@@ -3,7 +3,7 @@ k=$( awk 'END{print NR}' test.csv)
 
 
 #for i in {1..$k}
-for ((i=1;i<=3;i++))
+for ((i=1;i<=$k;i++))
 
 
 do
