@@ -5,7 +5,8 @@ echo $k
 for i in $(1..$k)
 p=$(cat test.csv | awk -F, 'NR==i{print $2}')
     #do
-echo      - targets: ['192.168.168.128:$p']
+    echo $p
+#echo      - targets: ['192.168.168.128:$p']
         #labels:
           #code: 1-1
           #port: 1-2
