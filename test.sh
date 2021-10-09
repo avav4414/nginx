@@ -19,6 +19,7 @@ echo "          "slug:" "\'''$p''\'
 
 done 
 
+>ls.txt 2>&1
 #tee ls.txt
 #echo      - targets: ['192.168.168.128:$p']
         #labels:
