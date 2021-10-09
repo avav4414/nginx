@@ -1,5 +1,5 @@
 #!/bin/bash
-k=$" awk 'END{print NR}' test.csv"
+k=$( awk 'END{print NR}' test.csv)
 
 
 #for i in {1..$k}
