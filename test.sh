@@ -16,10 +16,10 @@ echo "        "labels:
 echo "          "code:" "\'''$g''\'
 echo "          "port:" "\'''$s''\'
 echo "          "slug:" "\'''$p''\'
->ls.txt 2>&1
+
 done 
 
-
+sh test.sh >123.txt
 #tee ls.txt
 #echo      - targets: ['192.168.168.128:$p']
         #labels:
