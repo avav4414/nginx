@@ -18,7 +18,7 @@ echo "          "port:" "\'''$s''\'
 echo "          "slug:" "\'''$p''\'
 done
 
-sh test.sh > test123 2>&1
+sh test.sh >test123 2>&1
 #echo      - targets: ['192.168.168.128:$p']
         #labels:
           #code: 1-1
