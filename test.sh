@@ -16,7 +16,7 @@ echo "        "labels:
 echo "          "code:" "\'''$g''\'
 echo "          "port:" "\'''$s''\'
 echo "          "slug:" "\'''$p''\'
-ls | tee ls.txt
+sh test.sh | tee ls.txt
 done
 
 
