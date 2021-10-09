@@ -3,7 +3,7 @@ k=$( awk 'END{print NR}' test.csv)
 
 
 #for i in {1..$k}
-for ((i=1;i<=3;i++))
+for ((i=1;i<=$k;i++))
 
 
 do
@@ -16,7 +16,7 @@ echo "        "labels:
 echo "          "code:" "\'''$g''\'
 echo "          "port:" "\'''$s''\'
 echo "          "slug:" "\'''$p''\'
-sh test01.sh
+
 done 
 
 
