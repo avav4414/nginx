@@ -3,7 +3,7 @@ k=$( awk 'END{print NR}' test.csv)
 
 
 #for i in {1..$k}
-for ((i=1;i<=$k;i++))
+for ((i=1;i<=3;i++))
 
 
 do
@@ -13,9 +13,9 @@ g=$(cat test.csv | awk -F, 'NR=='$i'{print $1}')
 p=$(cat test.csv | awk -F, 'NR=='$i'{print $3}')
 echo "      "-" "targets:" "['192.168.168.128:'$s'']
 echo "        "labels:
-echo      "  "code: ''$g''
-echo      port: ''$s''
-echo      slug: ''$p''
+echo "          "code:" "''$g''
+echo "          "port:" "''$s''
+echo "          "slug:" "''$p''
 done
 
 #echo      - targets: ['192.168.168.128:$p']
